@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, orange, blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.to-do {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.to-do span {
+  font-weight: bold;
+  font-size: 1.6rem;
+  background: linear-gradient(135deg, blue, orange);
+  background-clip: text;
+  color: transparent;
+}
+.to-do img {
+  width: 30px;
+}
+.input {
+  display: flex;
+  align-items: center;
+  background-color: #edeef0;
+  padding-left: 15px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+input {
+  flex: 1;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  text-transform: capitalize;
+}
+button {
+  font-size: 1rem;
+  border-radius: 30px;
+  padding: 12px 25px;
+  border: none;
+  outline: none;
+  background-color: rgb(245, 86, 23);
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+uL{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+li{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+ul li::before{
+  content: '';
+  background-image: url(unchecked.png);
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+}
+
+ul li.checked::before{
+  content: '';
+  background-image: url(checked.png);
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+}
+ul li.checked{
+  text-decoration: line-through;
+  color: grey;
+}
+
+ul li span{
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+ul li span:hover{
+  background-color: #edeef0;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 15px;
+  }
+
+  .to-do span {
+    font-size: 1.3rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+}
